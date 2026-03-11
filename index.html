@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MCQ Shuffler</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="card full">
+            <h1>Multiple Choice Quiz Shuffler</h1>
+            <p>
+                Paste any multiple-choice test below. The tool detects numbered questions like
+                <strong>1.</strong>, <strong>2.</strong>, <strong>3.</strong> and options like
+                <strong>a)</strong>, <strong>b)</strong>, <strong>c)</strong>, then shuffles both
+                the <strong>questions</strong> and the <strong>options</strong>.
+            </p>
+            <p>
+                It does not require an answer key. It simply reorders the test based on structure.
+            </p>
+            <p>
+                Example:
+            </p>
+            <p>
+                <code class="inline">1. Το κύριο όργανο του κυκλοφορικού συστήματος είναι:</code><br>
+                <code class="inline">a) η καρδιά.</code><br>
+                <code class="inline">b) τα αγγεία.</code><br>
+                <code class="inline">c) το αίμα.</code>
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="label">Input</div>
+            <textarea id="input">1. Το κύριο όργανο του κυκλοφορικού συστήματος είναι:
+                a) η καρδιά.
+                b) τα αγγεία.
+                c) το αίμα.
+                
+                2. Το μυοκάρδιο είναι μυϊκός ιστός που συστέλλεται:
+                a) συνέχεια.
+                b) χωρίς τη θέλησή μας.
+                c) με τη θέλησή μας.
+                
+                3. Πόσους χώρους έχει η καρδιά;
+                a) 1
+                b) 4
+                c) 2</textarea>
+
+            <div class="row">
+                <button class="primary" id="shuffleBtn">Shuffle Test</button>
+                <button class="secondary" id="sampleBtn">Load Sample</button>
+                <button class="secondary" id="clearBtn">Clear</button>
+            </div>
+
+            <div id="status" class="status">Ready.</div>
+        </div>
+
+        <div class="card">
+            <div class="label">Output</div>
+            <textarea id="output" placeholder="Your shuffled test will appear here..."></textarea>
+
+            <div class="row">
+                <button class="success" id="copyBtn">Copy Output</button>
+                <button class="secondary" id="downloadBtn">Download .txt</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>MCQ Shuffler</p>
+            <p class="creator">Created by <strong>Νικόλαος Λαζίδης</strong></p>
+            <p class="small">Educational utility for generating randomized multiple‑choice tests.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
